@@ -20,7 +20,7 @@ services:
     
   back:
     build:
-      context: ./back
+      context: ./back/
       dockerfile: Dockerfile
     container_name: skillhub-back
     environment:
@@ -44,7 +44,7 @@ services:
 
   front:
     build:
-      context: ./front
+      context: ./front/
       dockerfile: Dockerfile
       args:
         VITE_BACK_URL: http://localhost:3001
